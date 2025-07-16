@@ -1,9 +1,16 @@
 {
   "imports": {
     "oak": "https://deno.land/x/oak@v12.6.1/mod.ts",
-    "stripe": "npm:stripe@13.0.0"
+    "stripe": "npm:stripe@13.0.0",
+    "firebase-admin": "npm:firebase-admin@12.0.0",
+    "postgres": "https://deno.land/x/postgres@v0.19.3/mod.ts",
+    "bcrypt": "https://deno.land/x/bcrypt@v0.4.1/mod.ts",
+    "djwt": "https://deno.land/x/djwt@v3.0.2/mod.ts",
+    "cors": "https://deno.land/x/cors@v1.2.2/mod.ts",
+    "zod": "npm:zod@3.22.4"
   },
   "tasks": {
-    "dev": "denon run --allow-net --allow-env main.ts"
+    "dev": "denon run --allow-net --allow-env --allow-read main.ts",
+    "init-db": "deno run --allow-env --allow-read --allow-net scripts/init-db.ts"
   }
 } 
